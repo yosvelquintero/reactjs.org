@@ -80,10 +80,8 @@ This means that you can use JSX inside of `if` statements and `for` loops, assig
 
 ```js{3,5}
 function getGreeting(user) {
-  if (user) {
-    return <h1>Hello, {formatName(user)}!</h1>;
-  }
-  return <h1>Hello, Stranger.</h1>;
+  const message = user ? Hello, {formatName(user)}! : Hello, Stranger.;
+  return <h1>{message}</h1>;
 }
 ```
 
